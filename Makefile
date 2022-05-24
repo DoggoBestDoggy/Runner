@@ -1,28 +1,35 @@
 ##
-## RUNNER PROJECT, 23/05/2022 by bonhou_q
-## /Users/zenom_/Documents
+## RUNNER PROJECT, 23/05/2022 by deleta_t and bernar_a
 ## File description:
 ##      makefile
 ##
 
-CPPFLAGS = `sdl2-config --cflags`
-LDLIBS = `sdl2-config --libs`
+NAME =     Runner
 
-SRC = ./runner.c
-OBJ = $(SRC:.c=.o)
-CFLAGS += -Wall -Wextra -Werror
-NAME = runner
+SRC    =    Main/main.c\
+        Main/draw.c\
+        Main/init.c\
+        Main/input.c
+
+CC =     gcc
+
+OBJ =     $(SRC:.c=.o)
+
+CFLAGS +=     -Wall -Wextra -Werror
+CFLAGS +=     -I./The_Fenetre
+
+LIBS +=     -lSDL2 -lSDL2_image
 
 $(NAME): $(OBJ)
-	gcc -o $(NAME) $(OBJ) $(CFLAGS) $(LDLIBS)
+	$(CC) -o $(NAME) $(OBJ) $(CFLAGS) $(LIBS)
 
-all:	 $(NAME)
+all: $(NAME)
 
 clean: 
-	rm -f $(OBJ)
+	rm -rf $(OBJ)
 
-fclean:
-	 rm -f $(NAME)
+fclean: clean
+	rm -rf $(NAME)
 
 re: fclean all
 
