@@ -21,9 +21,11 @@ int input_handler(Entity *entity) {
         case SDL_KEYUP :
             printf("key is up\n");
             switch (event.key.keysym.sym) {
-            case SDLK_UP:
+                case SDLK_UP:
                     entity->pos_y -= 4;
                     break;
             }
+            break;
+    }
     return 0;
 }
