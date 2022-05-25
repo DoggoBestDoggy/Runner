@@ -14,7 +14,7 @@ int input_handler(Entity *entity) {
             printf("key is down\n");
             switch (event.key.keysym.sym) {
                 case SDLK_DOWN:
-                    entity->pos_y -= 4;
+                    entity->pos_y += 4;
                     break;
             }
             break;
@@ -22,7 +22,23 @@ int input_handler(Entity *entity) {
             printf("key is up\n");
             switch (event.key.keysym.sym) {
                 case SDLK_UP:
-                    entity->pos_y += 4;
+                    entity->pos_y -= 4;
+                    break;
+            }
+            break;
+            case SDL_KEYRIGHT :
+            printf("key is right\n");
+            switch (event.key.keysym.sym) {
+                case SDLK_RIGHT:
+                    entity->pos_x -= 4;
+                    break;
+            }
+            break;
+            case SDL_KEYLEFT :
+            printf("key is left\n");
+            switch (event.key.keysym.sym) {
+                case SDLK_LEFT:
+                    entity->pos_x += 4;
                     break;
             }
             break;
