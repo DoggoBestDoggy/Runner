@@ -6,17 +6,17 @@
 
 int main() {
     Win *app = malloc(sizeof(Win));
-    Entity *kirby = malloc(sizeof(Entity));
+    Entity *vaisseau = malloc(sizeof(Entity));
 
     if (initSDL(app) < 0) {
         return -1;
     }
 
-    kirby->pos_x = 100;
-    kirby->pos_y = 100;
-    kirby->width = 50;
-    kirby->height = 50;
-    kirby->texture = loadTexture(app, "Ressource/kirby.png");
+    vaisseau->pos_x = 100;
+    vaisseau->pos_y = 100;
+    vaisseau->width = 50;
+    vaisseau->height = 50;
+    vaisseau->texture = loadTexture(app, "Ressource/vaisseau.png");
 
     while (input_handler() == 0) {
         prepareCanvas(app);
