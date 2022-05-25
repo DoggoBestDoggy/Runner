@@ -22,7 +22,7 @@ int input_handler(Entity *entity) {
             printf("key is up\n");
             switch (event.key.keysym.sym) {
                 case SDLK_UP:
-                    entity->pos_y -= 4;
+                    entity->pos_y += 4;
                     break;
             }
             break;
