@@ -1,5 +1,5 @@
 ##
-## RUNNER PROJECT, 23/05/2022 by deleta_t and bernar_a
+## RUNNER PROJECT, 23/05/2022 by bonhou_q and rigoni_j
 ## File description:
 ##      makefile
 ##
