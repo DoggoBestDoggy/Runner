@@ -17,7 +17,13 @@ int input_handler(Entity *entity) {
                     entity->pos_y -= 4;
                     break;
                 case SDLK_DOWN:
-                    entity->pos_y += 4;
+                    entity->pos_y -= 4;
+                    break;
+                case SDLK_RIGHT:
+                    entity->pos_x += 4;
+                    break;
+                case SDLK_LEFT:
+                    entity->pos_x += 4;
                     break;
             }
             break;
