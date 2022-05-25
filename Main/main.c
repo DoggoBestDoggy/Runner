@@ -17,10 +17,11 @@ int main() {
     vaisseau->width = 50;
     vaisseau->height = 50;
     vaisseau->texture = loadTexture(app, "Ressource/vaisseau.png");
+    SDL_SetRenderDrawColor(app->renderer, 00, 000, 000, 000);
 
     while (input_handler() == 0) {
         prepareCanvas(app);
-        drawEntity(app, kirby);
+        drawEntity(app, vaisseau);
         presentCanvas(app);
         SDL_Delay(16);
     }
