@@ -19,7 +19,7 @@ int main() {
     vaisseau->texture = loadTexture(app, "Ressource/vaisseau.png");
     SDL_SetRenderDrawColor(app->renderer, 00, 000, 000, 000);
 
-    while (input_handler() == 0) {
+    while (input_handler(vaisseau) == 0) {
         prepareCanvas(app);
         drawEntity(app, vaisseau);
         presentCanvas(app);
