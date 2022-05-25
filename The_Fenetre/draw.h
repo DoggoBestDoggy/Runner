@@ -4,9 +4,6 @@
 #include "window.h"
 #include <SDL2/SDL_image.h>
 
-void prepareCanvas(Win *app);
-void presentCanvas(Win *app);
-
 typedef struct {
     int         pos_x;
     int         pos_y;
@@ -14,5 +11,11 @@ typedef struct {
     int         height;
     SDL_Texture *texture;
 } Entity;
+
+void prepareCanvas(Win *app);
+void presentCanvas(Win *app);
+SDL_Texture *loadTexture(Win *app, char *img_path);
+void drawEntity(Win *app, Entity *entity);
+
 
 #endif /* !DRAW */
