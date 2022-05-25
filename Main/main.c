@@ -13,6 +13,7 @@ int main() {
 
     while (input_handler() == 0) {
         prepareCanvas(app);
+        
         presentCanvas(app);
         SDL_Delay(16);
     }
