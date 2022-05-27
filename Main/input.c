@@ -23,7 +23,7 @@ int input_handler(Entity *entity)
             }
             break;
         case SDLK_UP:
-            if (entity->pos_y + 4 < 580)
+            if (entity->pos_y + 4 > 580)
             {
 
                 printf("TROP EN HAUT LA ");
@@ -31,14 +31,14 @@ int input_handler(Entity *entity)
             }
             break;
         case SDLK_RIGHT:
-            if (entity->pos_y + 8 < 560)
+            if (entity->pos_y + 8 > 560)
             {
                 printf("TROP A DRWAT ");
                 entity->pos_x += 8;
             }
             break;
         case SDLK_LEFT:
-            if (entity->pos_y - 8 < 0)
+            if (entity->pos_y - 8 > 0)
             {
                 printf("TROP A GAUSH ");
                 entity->pos_x -= 2;
