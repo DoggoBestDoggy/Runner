@@ -7,10 +7,13 @@
 #define WINDOW_HEIGHT 560
 #define WINDOW_NAME "Star_Renard"
 
-typedef struct {
-    SDL_Renderer    *renderer;
-    SDL_Window      *window;
+typedef struct
+{
+    SDL_Renderer *renderer;
+    SDL_Window *window;
 
 } Win;
+
+SDL_DisplayMode getWindowSize();
 
 #endif /* !WINDOW */

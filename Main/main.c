@@ -4,11 +4,13 @@
 #include "draw.h"
 #include "init.h"
 
-int main() {
+int main()
+{
     Win *app = malloc(sizeof(Win));
     Entity *vaisseau = malloc(sizeof(Entity));
 
-    if (initSDL(app) < 0) {
+    if (initSDL(app) < 0)
+    {
         return -1;
     }
 
@@ -18,21 +20,24 @@ int main() {
     vaisseau->height = 50;
     vaisseau->texture = loadTexture(app, "Ressource/vaisseau.png");
 
-    while (input_handler(vaisseau) == 0) {
+    while (input_handler(vaisseau) == 0)
+    {
         prepareCanvas(app);
         drawEntity(app, vaisseau);
         presentCanvas(app);
         SDL_Delay(16);
     }
-    
+
     return 0;
 }
 
-int enemy() {
-Win *app = malloc(sizeof(Win));
+int enemy()
+{
+    Win *app = malloc(sizeof(Win));
     Entity *enemy = malloc(sizeof(Entity));
 
-    if (initSDL(app) < 0) {
+    if (initSDL(app) < 0)
+    {
         return -1;
     }
 
@@ -42,12 +47,13 @@ Win *app = malloc(sizeof(Win));
     enemy->height = 50;
     enemy->texture = loadTexture(app, "Ressource/enemy.png");
 
-    while (input_handler(enemy) == 0) {
+    while (input_handler(enemy) == 0)
+    {
         prepareCanvas(app);
         drawEntity(app, enemy);
         presentCanvas(app);
         SDL_Delay(16);
     }
-    
-return 0;
+
+    return 0;
 }

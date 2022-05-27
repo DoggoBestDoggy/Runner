@@ -46,5 +46,21 @@ int input_handler(Entity *entity)
             break;
         }
     }
+    if (entity->pos_y < 0)
+    {
+        entity->pos_y = 0;
+    }
+    else if (entity->pos_y > (WINDOW_HEIGHT - entity->height))
+    {
+        entity->pos_y = WINDOW_HEIGHT - entity->height;
+    }
+    if (entity->pos_x < 0)
+    {
+        entity->pos_x = 0;
+    }
+    else if (entity->pos_x > (WINDOW_WIDTH)-entity->height)
+    {
+        entity->pos_x = WINDOW_WIDTH - entity->width;
+    }
     return 0;
 }
