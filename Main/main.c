@@ -12,8 +12,8 @@ int main() {
         return -1;
     }
 
-    vaisseau->pos_x = 100;
-    vaisseau->pos_y = 100;
+    vaisseau->pos_x = 10;
+    vaisseau->pos_y = 10;
     vaisseau->width = 50;
     vaisseau->height = 50;
     vaisseau->texture = loadTexture(app, "Ressource/vaisseau.png");
