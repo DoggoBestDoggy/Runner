@@ -41,7 +41,6 @@ int input_handler(Entity *entity)
             }
             break;
         }
-        break;
     }
     return 0;
 }
