@@ -17,7 +17,6 @@ int main() {
     vaisseau->width = 50;
     vaisseau->height = 50;
     vaisseau->texture = loadTexture(app, "Ressource/vaisseau.png");
-    SDL_SetRenderDrawColor(app->renderer, 00, 000, 000, 000);
 
     while (input_handler(vaisseau) == 0) {
         prepareCanvas(app);
@@ -27,4 +26,27 @@ int main() {
     }
     
     return 0;
+}
+int enemy() {
+Win *app = malloc(sizeof(Win));
+    Entity *enemy = malloc(sizeof(Entity));
+
+    if (initSDL(app) < 0) {
+        return -1;
+    }
+
+    enemy->pos_x = 10;
+    enemy->pos_y = 10;
+    enemy->width = 50;
+    enemy->height = 50;
+    enemy->texture = loadTexture(app, "Ressource/enemy.png");
+
+    while (input_handler(enemy) == 0) {
+        prepareCanvas(app);
+        drawEntity(app, enemy);
+        presentCanvas(app);
+        SDL_Delay(16);
+    }
+    
+return 0;
 }
