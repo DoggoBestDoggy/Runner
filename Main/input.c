@@ -16,35 +16,46 @@ int input_handler(Entity *entity)
         switch (event.key.keysym.sym)
         {
         case SDLK_DOWN:
-            if (entity->pos_y - 4 < 0)
-            {
-                printf("TROP EN BAS LA ");
-                entity->pos_y += 4;
-            }
+
+            printf("TROP EN BAS LA ");
+            entity->pos_y += 4;
+
             break;
         case SDLK_UP:
-            if (entity->pos_y + 4 > 580)
-            {
 
-                printf("TROP EN HAUT LA ");
-                entity->pos_y -= 4;
-            }
+            printf("TROP EN HAUT LA ");
+            entity->pos_y -= 4;
+
             break;
         case SDLK_RIGHT:
-            if (entity->pos_y + 8 > 560)
-            {
-                printf("TROP A DRWAT ");
-                entity->pos_x += 8;
-            }
+
+            printf("TROP A DRWAT ");
+            entity->pos_x += 8;
+
             break;
         case SDLK_LEFT:
-            if (entity->pos_y - 8 < 0)
-            {
-                printf("TROP A GAUSH ");
-                entity->pos_x -= 2;
-            }
+
+            printf("TROP A GAUSH ");
+            entity->pos_x -= 2;
+
             break;
         }
+    }
+    if (entity->pos_y < 0)
+    {
+        entity->pos_y = 0;
+    }
+    else if (entity->pos_y > (WINDOW_HEIGHT - entity->height))
+    {
+        entity->pos_y = WINDOW_HEIGHT - entity->height;
+    }
+    if (entity->pos_x < 0)
+    {
+        entity->pos_x = 0;
+    }
+    else if (entity->pos_x > (WINDOW_WIDTH)-entity->height)
+    {
+        entity->pos_x = WINDOW_WIDTH - entity->width;
     }
     return 0;
 }

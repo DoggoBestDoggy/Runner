@@ -3,14 +3,17 @@
 
 #include <SDL2/SDL.h>
 
-#define WINDOW_WIDTH 580
-#define WINDOW_HEIGHT 560
+#define WINDOW_WIDTH 800
+#define WINDOW_HEIGHT 550
 #define WINDOW_NAME "Star_Renard"
 
-typedef struct {
-    SDL_Renderer    *renderer;
-    SDL_Window      *window;
+typedef struct
+{
+    SDL_Renderer *renderer;
+    SDL_Window *window;
 
 } Win;
+
+SDL_DisplayMode getWindowSize();
 
 #endif /* !WINDOW */

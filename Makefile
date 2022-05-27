@@ -9,7 +9,8 @@ NAME =     Runner
 SRC    =    Main/main.c\
         Main/draw.c\
         Main/init.c\
-        Main/input.c
+        Main/input.c\
+		Main/window.c
 
 CC =     gcc
 
