@@ -27,6 +27,7 @@ int main() {
     
     return 0;
 }
+
 int enemy() {
 Win *app = malloc(sizeof(Win));
     Entity *enemy = malloc(sizeof(Entity));

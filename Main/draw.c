@@ -27,3 +27,4 @@ void drawEntity(Win *app, Entity *entity) {
     SDL_RenderCopy(app->renderer, entity->texture, NULL, &dest);
     
 }
+

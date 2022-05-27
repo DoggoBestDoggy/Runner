@@ -19,3 +19,4 @@ int initSDL(Win *app) {
     }
     return 0;
 }
+
