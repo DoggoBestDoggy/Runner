@@ -18,6 +18,14 @@ int input_handler(Entity *entity) {
                     break;
             }
             break;
+            case SDLK_LEFT :
+            printf("key is left\n");
+            switch (event.key.keysym.sym) {
+                case SDLK_LEFT:
+                    entity->pos_x += 4;
+                    break;
+            }
+            break;
         case SDL_KEYUP :
             printf("key is up\n");
             switch (event.key.keysym.sym) {
@@ -34,14 +42,14 @@ int input_handler(Entity *entity) {
                     break;
             }
             break;
-            case SDLK_LEFT :
-            printf("key is left\n");
-            switch (event.key.keysym.sym) {
-                case SDLK_LEFT:
-                    entity->pos_x += 4;
-                    break;
-            }
-            break;
+            // case SDLK_LEFT :
+            // printf("key is left\n");
+            // switch (event.key.keysym.sym) {
+            //     case SDLK_LEFT:
+            //         entity->pos_x += 4;
+            //         break;
+            // }
+            // break;
     }
     return 0;
 }
