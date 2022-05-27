@@ -28,10 +28,10 @@ int main() {
     return 0;
 }
 int enemy() {
-Winn *appp = malloc(sizeof(Winn));
+Win *app = malloc(sizeof(Win));
     Entity *enemy = malloc(sizeof(Entity));
 
-    if (initSDL(appp) < 0) {
+    if (initSDL(app) < 0) {
         return -1;
     }
 
@@ -39,12 +39,12 @@ Winn *appp = malloc(sizeof(Winn));
     enemy->pos_y = 100;
     enemy->width = 50;
     enemy->height = 50;
-    enemy->texture = loadTexture(appp, "Ressource/enemy.png");
+    enemy->texture = loadTexture(app, "Ressource/enemy.png");
 
     while (input_handler(enemy) == 0) {
-        prepareCanvas(appp);
-        drawEntity(appp, enemy);
-        presentCanvas(appp);
+        prepareCanvas(app);
+        drawEntity(app, enemy);
+        presentCanvas(app);
         SDL_Delay(16);
     }
     
