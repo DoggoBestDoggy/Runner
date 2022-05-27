@@ -16,7 +16,7 @@ int input_handler(Entity *entity)
         switch (event.key.keysym.sym)
         {
         case SDLK_DOWN:
-            if (entity->pos_y - 4 < 0)
+            if (entity->pos_y -= 4)
             {
                 printf("TROP EN BAS LA ");
                 entity->pos_y += 4;
