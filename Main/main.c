@@ -21,8 +21,8 @@ int main()
     vaisseau->height = 50;
     vaisseau->texture = loadTexture(app, "Ressource/vaisseau.png");
 
-    enemy->pos_x = 100;
-    enemy->pos_y = 100;
+    enemy->pos_x = 300;
+    enemy->pos_y = 300;
     enemy->width = 50;
     enemy->height = 50;
     enemy->texture = loadTexture(app, "Ressource/enemy.png");
