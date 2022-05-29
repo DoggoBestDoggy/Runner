@@ -33,6 +33,6 @@ void drawEntity(Win *app, Entity *entity, Enemy *enemy, Obstacle1 *obstacle1)
     SDL_Rect Pos = {enemy->pos_x, enemy->pos_y, enemy->width, enemy->height};
     SDL_RenderCopy(app->renderer, enemy->texture, NULL, &Pos);
 
-    SDL_Rect Pos = {obstacle1->pos_x, obstacle1->pos_y, obstacle1->width, obstacle1->height};
-    SDL_RenderCopy(app->renderer, obstacle1->texture, NULL, &Pos);
+    SDL_Rect Poss = {obstacle1->pos_x, obstacle1->pos_y, obstacle1->width, obstacle1->height};
+    SDL_RenderCopy(app->renderer, obstacle1->texture, NULL, &Poss);
 }
