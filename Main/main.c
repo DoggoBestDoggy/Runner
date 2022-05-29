@@ -9,6 +9,7 @@ int main()
     Win *app = malloc(sizeof(Win));
     Entity *vaisseau = malloc(sizeof(Entity));
     Enemy *enemy = malloc(sizeof(Enemy));
+    Obstacle1 *obstacle1 = malloc(sizeof(Obstacle1));
 
     if (initSDL(app) < 0)
     {
@@ -27,10 +28,16 @@ int main()
     enemy->height = 50;
     enemy->texture = loadTexture(app, "Ressource/enemy.png");
 
+    obstacle1->pos_x = 300;
+    obstacle1->pos_y = 300;
+    obstacle1->width = 50;
+    obstacle1->height = 50;
+    obstacle1->texture = loadTexture(app, "Ressource/obstacle1.png");
+
     while (input_handler(vaisseau) == 0)
     {
         prepareCanvas(app);
-        drawEntity(app, vaisseau, enemy);
+        drawEntity(app, vaisseau, enemy, obstacle1);
         presentCanvas(app);
         SDL_Delay(16);
     }
