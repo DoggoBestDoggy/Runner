@@ -25,20 +25,20 @@ int main()
 
     enemy->pos_x = 300;
     enemy->pos_y = 300;
-    enemy->width = 50;
-    enemy->height = 50;
+    enemy->width = 100;
+    enemy->height = 100;
     enemy->texture = loadTexture(app, "Ressource/enemy.png");
 
     obstacle1->pos_x = 400;
     obstacle1->pos_y = 400;
-    obstacle1->width = 50;
-    obstacle1->height = 50;
+    obstacle1->width = 90;
+    obstacle1->height = 90;
     obstacle1->texture = loadTexture(app, "Ressource/obstacle1.png");
 
-    obstacle2->pos_x = 400;
-    obstacle2->pos_y = 400;
-    obstacle2->width = 50;
-    obstacle2->height = 50;
+    obstacle2->pos_x = 200;
+    obstacle2->pos_y = 200;
+    obstacle2->width = 100;
+    obstacle2->height = 100;
     obstacle2->texture = loadTexture(app, "Ressource/obstacle2.png");
 
     while (input_handler(vaisseau) == 0)
