@@ -25,7 +25,7 @@ SDL_Texture *loadTexture(Win *app, char *img_path)
     return texture;
 }
 
-void drawEntity(Win *app, Entity *entity, Enemy *enemy, Obstacle1 *obstacle1)
+void drawEntity(Win *app, Entity *entity, Enemy *enemy, Obstacle1 *obstacle1, Obstacle2 *obstacle2)
 {
     SDL_Rect dest = {entity->pos_x, entity->pos_y, entity->width, entity->height};
     SDL_RenderCopy(app->renderer, entity->texture, NULL, &dest);
@@ -35,4 +35,7 @@ void drawEntity(Win *app, Entity *entity, Enemy *enemy, Obstacle1 *obstacle1)
 
     SDL_Rect Poss = {obstacle1->pos_x, obstacle1->pos_y, obstacle1->width, obstacle1->height};
     SDL_RenderCopy(app->renderer, obstacle1->texture, NULL, &Poss);
+
+    SDL_Rect Posss = {obstacle2->pos_x, obstacle2->pos_y, obstacle2->width, obstacle2->height};
+    SDL_RenderCopy(app->renderer, obstacle2->texture, NULL, &Posss);
 }
